@@ -2,7 +2,6 @@ import "./App.css";
 import Nav from "./components/Nav";
 import Button from "./components/Button";
 import { useState } from "react";
-import ProductTable from "./components/ProductTable";
 import Products from "./components/Products";
 
 function App() {
@@ -20,7 +19,7 @@ function App() {
   ];
   return (
     <div>
-      <nav className="container">
+      <nav>
         <Nav></Nav>
         <Products products={products}></Products>
         <Button count={count} color={"red"} onClick={increaseCount}></Button>

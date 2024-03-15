@@ -1,17 +1,30 @@
-import "../css/Nav.css";
-function Nav() {
+const Nav = () => {
   return (
-    <div className="nav">
-      <h3>Home</h3>
-      <ul className="nav-links">
-        <li>
-          <a>User</a>
-        </li>
-        <li>
-          <a>Log in</a>
-        </li>
-      </ul>
+    <div className="navbar bg-base-100">
+      <div className="flex-1">
+        <a className="btn btn-ghost text-xl">daisyUI</a>
+      </div>
+      <div className="flex-none">
+        <ul className="menu menu-horizontal px-1">
+          <li>
+            <a href="#">Link</a>
+          </li>
+          <li>
+            <details>
+              <summary>Parent</summary>
+              <ul className="p-2 bg-base-100 rounded-t-none">
+                <li>
+                  <a href="#">Link 1</a>
+                </li>
+                <li>
+                  <a href="#">Link 2</a>
+                </li>
+              </ul>
+            </details>
+          </li>
+        </ul>
+      </div>
     </div>
   );
-}
+};
 export default Nav;

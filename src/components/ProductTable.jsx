@@ -1,6 +1,5 @@
 import ProductCategoryRow from "./ProductCategoryRow";
 import ProductRow from "./ProductRow";
-import "../css/ProductTable.css";
 
 function ProductTable({ products, inStockOnly, filterText }) {
   const rows = [];
