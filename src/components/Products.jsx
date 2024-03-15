@@ -1,3 +1,4 @@
+import PropTypes from "prop-types"; // ES6
 import { useState } from "react";
 import ProductTable from "./ProductTable";
 import SearchBar from "./SearchBar";
@@ -22,4 +23,7 @@ function Products({ products }) {
     </div>
   );
 }
+Products.propTypes = {
+  products: PropTypes.array.isRequired,
+};
 export default Products;

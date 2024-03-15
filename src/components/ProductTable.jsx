@@ -1,3 +1,4 @@
+import PropTypes from "prop-types"; // ES6
 import ProductCategoryRow from "./ProductCategoryRow";
 import ProductRow from "./ProductRow";
 
@@ -19,6 +20,7 @@ function ProductTable({ products, inStockOnly, filterText }) {
     rows.push(<ProductRow product={product} key={product.name}></ProductRow>);
     lastCategory = product.category;
   });
+
   return (
     <table id="data-table" border={1}>
       <thead>
@@ -31,5 +33,9 @@ function ProductTable({ products, inStockOnly, filterText }) {
     </table>
   );
 }
-
+ProductTable.propTypes = {
+  products: PropTypes.array.isRequired,
+  inStockOnly: PropTypes.bool.isRequired,
+  filterText: PropTypes.string.isRequired,
+};
 export default ProductTable;

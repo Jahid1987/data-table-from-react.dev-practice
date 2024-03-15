@@ -1,3 +1,4 @@
+import PropTypes from "prop-types"; // ES6
 function ProductCategoryRow({ category }) {
   const categoryStyle = {
     textAlign: "center",
@@ -12,4 +13,7 @@ function ProductCategoryRow({ category }) {
     </tr>
   );
 }
+ProductCategoryRow.propTypes = {
+  category: PropTypes.string,
+};
 export default ProductCategoryRow;

@@ -1,3 +1,4 @@
+import PropTypes from "prop-types"; // ES6
 function ProductRow({ product }) {
   const name = product.stocked ? (
     product.name
@@ -11,5 +12,7 @@ function ProductRow({ product }) {
     </tr>
   );
 }
-
+ProductRow.propTypes = {
+  product: PropTypes.object.isRequired,
+};
 export default ProductRow;

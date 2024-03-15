@@ -1,3 +1,4 @@
+import PropTypes from "prop-types"; // ES6
 function SearchBar({
   inStockOnly,
   filterText,
@@ -23,4 +24,10 @@ function SearchBar({
     </form>
   );
 }
+SearchBar.propTypes = {
+  inStockOnly: PropTypes.bool.isRequired,
+  filterText: PropTypes.string.isRequired,
+  onFilterTextChange: PropTypes.func.isRequired,
+  onInStockOnlyChange: PropTypes.func.isRequired,
+};
 export default SearchBar;

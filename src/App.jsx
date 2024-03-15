@@ -1,14 +1,7 @@
-import "./App.css";
 import Nav from "./components/Nav";
-import Button from "./components/Button";
-import { useState } from "react";
 import Products from "./components/Products";
 
 function App() {
-  const [count, setCount] = useState(0);
-  function increaseCount() {
-    setCount(count + 1);
-  }
   const products = [
     { category: "Fruits", price: "$1", stocked: true, name: "Apple" },
     { category: "Fruits", price: "$1", stocked: true, name: "Dragonfruit" },
@@ -22,7 +15,6 @@ function App() {
       <nav>
         <Nav></Nav>
         <Products products={products}></Products>
-        <Button count={count} color={"red"} onClick={increaseCount}></Button>
       </nav>
     </div>
   );
